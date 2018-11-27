@@ -1,0 +1,18 @@
+{
+  "name": "border-1px.less",
+  "version": "1.0.0",
+  "description": "less version of the border-1px solution",
+  "main": "border-1px.less",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goddancer/npm/tree/master/border-1px.less"
+  },
+  "keywords": [
+    "border-1px"
+  ],
+  "author": "goddancer",
+  "license": "ISC"
+}

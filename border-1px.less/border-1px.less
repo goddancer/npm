@@ -1,0 +1,174 @@
+.border-top-1px(@color: #292c32; @className: border_top_1px) {
+  &.@{className} {
+    position: relative;
+    border: none !important;
+    &::before {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px; /* no */
+      background-color: @color;
+      -webkit-transform-origin: left top;
+      transform-origin: left top;
+    }
+  }
+  /* 2倍屏 */
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    &.@{className}::before {
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
+  }
+
+  /* 3倍屏 */
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    &.@{className}::before {
+      -webkit-transform: scaleY(0.33);
+      transform: scaleY(0.33);
+    }
+  }
+}
+.border-top-none(@className: border_top_1px) {
+  &.@{className} {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.border-right-1px(@color: #292c32; @className: border_right_1px) {
+  &.@{className} {
+    position: relative;
+    border: none !important;
+    &::after {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px; /* no */
+      height: 100%;
+      background-color: @color;
+      -webkit-transform-origin: top right;
+      transform-origin: top right;
+    }
+  }
+  /* 2倍屏 */
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    &.@{className}::after {
+      -webkit-transform: scaleX(0.5);
+      transform: scaleX(0.5);
+    }
+  }
+
+  /* 3倍屏 */
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    &.@{className}::after {
+      -webkit-transform: scaleX(0.33);
+      transform: scaleX(0.33);
+    }
+  }
+}
+.border-right-none(@className: border_right_1px) {
+  &.@{className} {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.border-bottom-1px(@color: #292c32; @className: border_bottom_1px) {
+  &.@{className} {
+    position: relative;
+    border: none !important;
+    &::after {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px; /* no */
+      background-color: @color;
+      -webkit-transform-origin: left bottom;
+      transform-origin: left bottom;
+    }
+  }
+  /* 2倍屏 */
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    &.@{className}::after {
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
+  }
+
+  /* 3倍屏 */
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    &.@{className}::after {
+      -webkit-transform: scaleY(0.33);
+      transform: scaleY(0.33);
+    }
+  }
+}
+.border-bottom-none(@className: border_bottom_1px) {
+  &.@{className} {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.border-left-1px(@color: #292c32; @className: border_left_1px) {
+  &.@{className} {
+    position: relative;
+    border: none !important;
+    &::before {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 1px; /* no */
+      height: 100%;
+      background-color: @color;
+      -webkit-transform-origin: left top;
+      transform-origin: left top;
+    }
+  }
+  /* 2倍屏 */
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    &.@{className}::before {
+      -webkit-transform: scaleX(0.5);
+      transform: scaleX(0.5);
+    }
+  }
+
+  /* 3倍屏 */
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    &.@{className}::before {
+      -webkit-transform: scaleX(0.33);
+      transform: scaleX(0.33);
+    }
+  }
+}
+.border-left-none(@className: border_left_1px) {
+  &.@{className} {
+    &::before {
+      display: none;
+    }
+  }
+}
+/*
+  1、top、left、bottom、left的border-1px
+  2、给需要底线的，添加class：border-bottom-1px；需要改变颜色：.border-bottom-1px(#fff);
+  3、需要新增底线：.border-bottom-1px(#color, newClassName);className不可用中线"-";
+  4、不需要显示或重叠的关闭
+*/
+.border-top-1px();
+.border-right-1px();
+.border-bottom-1px();
+.border-left-1px();
+
+//.border-top-none();
+//.border-right-none();
+//.border-bottom-none();
+//.border-left-none();
