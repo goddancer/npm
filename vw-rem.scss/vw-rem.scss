@@ -1,0 +1,14 @@
+$baseFontSize: 37.5px !default;
+$designSize: 375px !default;
+$bodyMinWidth: 320px !default;
+$bodyMaxWidth: 540px !default;
+
+html{
+  font-size: ($baseFontSize / $designSize) * 100vw;
+  @media screen and (max-width: $bodyMinWidth) {
+    font-size: $baseFontSize * $bodyMinWidth / $designSize;
+  }
+  @media screen and (min-width: $bodyMaxWidth) {
+    font-size: $baseFontSize * $bodyMaxWidth / $designSize;
+  }
+}

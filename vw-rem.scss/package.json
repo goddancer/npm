@@ -1,0 +1,16 @@
+{
+  "name": "vw-rem.scss",
+  "version": "1.0.0",
+  "description": "vw+rem layout plan",
+  "main": "vw-rem.scss",
+  "scripts": {
+    "test": "sass vw-rem.scss ./test/dist.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goddancer/npm/tree/master/vw-rem.scss"
+  },
+  "keywords": ["vw+rem layout plan"],
+  "author": "goddancer",
+  "license": "ISC"
+}
