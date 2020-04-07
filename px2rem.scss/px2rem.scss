@@ -1,6 +1,7 @@
 @import "utils.scss";
 
 $baseFontSize: 75px !default;
+$decimals: 3 !default;
 
 @function px2rem($px) {
   $px-value: strip-units($px);
@@ -10,12 +11,12 @@ $baseFontSize: 75px !default;
 }
 
 @mixin remCalc($property, $values...) {
-  $max: length($values); // 返回$values列表的长度值
+  $max: length($values);
   $remValues: '';
 
   @for $i from 1 through $max {
-    $value: strip-units(nth($values, $i)); // 返回$values列表中的第$i个值，并将单位值去掉
-    $remValues: #{$remValues + toFixedN(px2rem($value))};
+    $value: strip-units(nth($values, $i));
+    $remValues: #{$remValues + toFixedN(px2rem($value), $decimals)};
 
     @if $i < $max {
       $remValues: #{$remValues + " "};
@@ -23,10 +24,4 @@ $baseFontSize: 75px !default;
   } 
 
   #{$property}: $remValues; 
-}
-
-body{
-  width: px2rem(75px);
-  @include remCalc(padding, 37.5px, 1, 3px, 75);
-  background-color: #ccc;
 }

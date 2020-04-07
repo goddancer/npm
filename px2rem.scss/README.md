@@ -1,6 +1,6 @@
 # px2rem.scss
 
-以iphone6为例，可以覆盖变量到自定义值`$baseFontSize: 75px !default;`
+以iphone6为例，可以覆盖变量到自定义值`$baseFontSize: 75px !default;`,`$decimals: 3 !default;`
 
 主要包含两个方法:
 
