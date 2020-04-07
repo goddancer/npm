@@ -1,0 +1,18 @@
+{
+  "name": "utils.scss",
+  "version": "1.0.0",
+  "description": "Scss tool method, generaly not use directly",
+  "main": "utils.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goddancer/npm/tree/master/utils.scss"
+  },
+  "keywords": [
+    "utils.scss"
+  ],
+  "author": "goddancer",
+  "license": "ISC"
+}

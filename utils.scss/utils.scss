@@ -1,0 +1,39 @@
+/* 
+  remove units
+  @params { (Number|String[]) } $value - the value to be remove units
+*/
+@function strip-units($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+/* 
+  usage similar to Math.pow width scss
+  @params { Number } $x - the pow base value
+  @params { Number } $n - the pow times value
+*/
+@function pow($x, $n) {
+  $ret: 1;
+    
+  @if $n >= 0 {
+    @for $i from 1 through $n {
+      $ret: $ret * $x;
+    } 
+  } @else {
+    @for $i from $n to 0 {
+      $ret: $ret / $x;
+    }
+  }
+  
+  @return $ret;
+}
+
+/* 
+  toFixedN usage similar to Number.toFixed width scss
+  @param { (Number|String[]) } $value - the value to be fixed, can with units
+  @param { Number= } [$digital=3] - the fixed decimal
+*/
+@function toFixedN($value, $digital: 3) {
+  $decimal: pow(10, $digital);
+
+  @return round($value * $decimal) / $decimal;
+}
