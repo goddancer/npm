@@ -1,0 +1,21 @@
+{
+  "name": "px2rem.scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "px2rem.scss",
+  "scripts": {
+    "test": "sass px2rem.scss dist.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goddancer/npm/tree/master/px2rem.scss"
+  },
+  "keywords": [
+    "utils.scss"
+  ],
+  "author": "goddancer",
+  "license": "ISC",
+  "dependencies": {
+    "utils.scss": "^1.0.0"
+  }
+}
